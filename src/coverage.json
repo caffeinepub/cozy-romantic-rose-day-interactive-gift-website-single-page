@@ -1,0 +1,41 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-07T04:59:27.850Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 1,
+    "implemented": 1,
+    "items": [
+      {
+        "id": "REQ-10",
+        "summary": "Fix the bouquet illustration in the Virtual Rose Gift section so it reliably loads and displays in production deployments (including when the app is hosted under a non-root base path). Update the image `src` construction to use the app base URL (instead of a hard-coded leading `/` path), and add a graceful fallback if the image fails to load.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/lib/assetUrl.ts",
+          "frontend/src/components/sections/VirtualRoseGiftSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/lib/assetUrl.ts",
+          "frontend/src/components/sections/VirtualRoseGiftSection.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "build-template/README.md",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/components/sections/VirtualRoseGiftSection.tsx",
+    "frontend/src/lib/assetUrl.ts",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

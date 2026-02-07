@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 1rem;
+        --background: 0.98 0.02 25;
+        --foreground: 0.25 0.05 15;
+        --card: 1 0.01 20;
+        --card-foreground: 0.25 0.05 15;
+        --popover: 1 0.01 20;
+        --popover-foreground: 0.25 0.05 15;
+        --primary: 0.55 0.18 15;
+        --primary-foreground: 0.99 0.01 20;
+        --secondary: 0.96 0.03 25;
+        --secondary-foreground: 0.35 0.06 15;
+        --muted: 0.95 0.02 25;
+        --muted-foreground: 0.50 0.04 20;
+        --accent: 0.94 0.04 30;
+        --accent-foreground: 0.30 0.06 15;
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.985 0 0;
+        --border: 0.90 0.02 25;
+        --input: 0.90 0.02 25;
+        --ring: 0.55 0.18 15;
+        --chart-1: 0.646 0.222 41.116;
+        --chart-2: 0.6 0.118 184.704;
+        --chart-3: 0.398 0.07 227.392;
+        --chart-4: 0.828 0.189 84.429;
+        --chart-5: 0.769 0.188 70.08;
+    }
+
+    .dark {
+        --background: 0.20 0.03 15;
+        --foreground: 0.98 0.01 20;
+        --card: 0.25 0.04 15;
+        --card-foreground: 0.98 0.01 20;
+        --popover: 0.25 0.04 15;
+        --popover-foreground: 0.98 0.01 20;
+        --primary: 0.75 0.15 15;
+        --primary-foreground: 0.20 0.03 15;
+        --secondary: 0.30 0.04 15;
+        --secondary-foreground: 0.98 0.01 20;
+        --muted: 0.30 0.04 15;
+        --muted-foreground: 0.65 0.03 20;
+        --accent: 0.40 0.06 20;
+        --accent-foreground: 0.98 0.01 20;
+        --destructive: 0.704 0.191 22.216;
+        --destructive-foreground: 0.98 0.01 20;
+        --border: 0.35 0.04 15;
+        --input: 0.35 0.04 15;
+        --ring: 0.65 0.12 15;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        background-image: url('/assets/generated/paper-texture.dim_2048x2048.png');
+        background-size: 400px 400px;
+        background-repeat: repeat;
+        background-attachment: fixed;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto;
+        }
+        
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+
+    .reduce-motion *,
+    .reduce-motion *::before,
+    .reduce-motion *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@layer utilities {
+    .animate-heartbeat {
+        animation: heartbeat 1.5s ease-in-out infinite;
+    }
+
+    .delay-100 {
+        animation-delay: 0.1s;
+    }
+
+    .delay-200 {
+        animation-delay: 0.2s;
+    }
+
+    @keyframes heartbeat {
+        0%, 100% {
+            transform: scale(1);
+        }
+        10%, 30% {
+            transform: scale(1.1);
+        }
+        20%, 40% {
+            transform: scale(1);
+        }
+    }
+
+    /* Touch-friendly hit targets */
+    button, a, [role="button"] {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    /* Smooth tap highlight */
+    * {
+        -webkit-tap-highlight-color: rgba(244, 63, 94, 0.1);
+    }
+}

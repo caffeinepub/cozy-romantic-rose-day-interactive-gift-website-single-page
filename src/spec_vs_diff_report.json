@@ -1,0 +1,15 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-07T04:59:27.847Z",
+  "summary": "REQ-10 appears implemented: bouquet image src is now constructed with a base-path-aware helper using Vite’s import.meta.env.BASE_URL, and the Virtual Rose Gift section includes a graceful, non-blocking fallback UI when the image fails to load. No evidence of changes to the listed immutable files in the provided diff summary.",
+  "missing_requirements": [],
+  "hallucinated_features": [],
+  "confidence": 0.9,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/components/sections/VirtualRoseGiftSection.tsx",
+    "frontend/src/lib/assetUrl.ts",
+    "project_state.json"
+  ]
+}

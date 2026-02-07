@@ -1,0 +1,39 @@
+{
+  "kind": "build_request",
+  "title": "Fix bouquet image not loading in Virtual Rose Gift section",
+  "priority": "high",
+  "requirements": [
+    {
+      "id": "REQ-10",
+      "text": "Fix the bouquet illustration in the Virtual Rose Gift section so it reliably loads and displays in production deployments (including when the app is hosted under a non-root base path). Update the image `src` construction to use the app base URL (instead of a hard-coded leading `/` path), and add a graceful fallback if the image fails to load.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Ok.. only one single thing- the bouquet pic isn't loading or showing"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The bouquet image displays in the Virtual Rose Gift section on both mobile and desktop in a production build.",
+        "The bouquet image URL is constructed in a way that works when the site is served from a subpath (i.e., does not rely on an absolute `/assets/...` path).",
+        "If the bouquet image cannot be loaded (e.g., missing asset), the UI shows a non-blocking fallback (e.g., styled placeholder container and/or short text) and does not break layout.",
+        "No changes are made to files listed as immutable in SYSTEM_CONTEXT."
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend immutable paths must not be edited: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui.",
+    "Backend remains single-actor; no backend changes are required for this fix."
+  ],
+  "nonGoals": [
+    "Redesigning the bouquet/rose interaction UX.",
+    "Changing the romantic copy or section order.",
+    "Adding new backend storage or APIs."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

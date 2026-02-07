@@ -1,0 +1,29 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Fix bouquet image loading under non-root base paths with graceful fallback",
+  "requirements": [
+    {
+      "id": "REQ-10",
+      "summary": "Update Virtual Rose Gift bouquet image to resolve correctly under a configurable app base path and render a non-blocking fallback when the asset fails to load.",
+      "acceptanceCriteria": [
+        "The bouquet image displays in the Virtual Rose Gift section on both mobile and desktop in a production build.",
+        "The bouquet image URL is constructed in a way that works when the site is served from a subpath (i.e., does not rely on an absolute `/assets/...` path).",
+        "If the bouquet image cannot be loaded (e.g., missing asset), the UI shows a non-blocking fallback (e.g., styled placeholder container and/or short text) and does not break layout.",
+        "No changes are made to files listed as immutable in SYSTEM_CONTEXT."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/lib/assetUrl.ts",
+          "operation": "create",
+          "description": "Add a small helper to build public asset URLs using the app's base URL (e.g., from the bundler runtime base path), ensuring paths work when hosted under a non-root subpath."
+        },
+        {
+          "path": "frontend/src/components/sections/VirtualRoseGiftSection.tsx",
+          "operation": "modify",
+          "description": "Replace the hard-coded leading-slash bouquet src with a base-URL-aware construction (using the new helper) pointing to frontend/public/assets/generated/bouquet.dim_1200x1200.png, and add an onError-driven graceful fallback UI (placeholder container and/or short text) that preserves layout on failure."
+        }
+      ]
+    }
+  ]
+}

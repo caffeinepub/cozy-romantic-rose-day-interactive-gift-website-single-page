@@ -1,0 +1,156 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Build a cozy, deeply romantic, interactive Rose Day gift website for the user’s boyfriend using responsive HTML/CSS/JavaScript (no heavy frameworks), featuring smooth animations, floating rose petals, hover/click interactions, background music toggle, personalized content sections, and a bouquet/virtual rose gift flow.",
+  "architectural_notes": [
+    "Tech stack: HTML, CSS, JavaScript only; avoid heavy frameworks.",
+    "Must be responsive for mobile and desktop.",
+    "Design target: single-person audience (boyfriend); prioritize intimate, personal tone.",
+    "Animations should be smooth and lightweight/performance-friendly."
+  ],
+  "known_issues": [
+    "Bouquet image asset is not loading/displaying (bouquet picture not showing)."
+  ],
+  "isFixRequest": true,
+  "existing_features": [
+    {
+      "id": "feature-create-a-responsive-single-page-romantic-experience-with-5-distinct-sections-in-this-order-1-landing-with-romantic-hero-message-rose-animation-2-why-you-are-my-favorite-person-3-virtual-rose-gift-bouquet-interaction-4-love-note-message-section-5-ending-screen-that-reads-exactly-happy-rose-day",
+      "title": "Create a responsive single-page romantic experience with 5 distinct sections in this order: (1) Landing with romantic hero message + rose animation, (2) “Why you are my favorite person”, (3) Virtual rose gift (bouquet) interaction, (4) Love note / message section, (5) Ending screen that reads exactly “Happy Rose Day ❤️”.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-cohesive-romantic-ui-theme-consistent-across-all-sections-using-the-specified-palette-rose-red-soft-pink-cream-warm-beige-gentle-gradients-soft-shadows-and-an-elegant-but-cute-intimate-visual-style-use-a-romantic-serif-for-headings-and-a-clean-soft-sans-serif-for-body-text-loaded-via-web-fonts",
+      "title": "Apply a cohesive romantic UI theme consistent across all sections using the specified palette (rose red, soft pink, cream, warm beige), gentle gradients, soft shadows, and an elegant-but-cute, intimate visual style. Use a romantic serif for headings and a clean soft sans-serif for body text (loaded via web fonts).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-smooth-lightweight-animations-smooth-scrolling-between-sections-subtle-section-reveal-on-scroll-transitions-and-romantic-micro-interactions-heartbeat-glow-on-hover-for-key-interactive-elements",
+      "title": "Implement smooth, lightweight animations: smooth scrolling between sections, subtle section reveal-on-scroll transitions, and romantic micro-interactions (heartbeat/glow) on hover for key interactive elements.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-floating-rose-petals-overlay-animation-that-is-performant-and-does-not-interfere-with-reading-or-clicking-content-petals-should-not-block-pointer-events-provide-a-user-control-to-reduce-motion-respect-prefers-reduced-motion",
+      "title": "Add a floating rose petals overlay animation that is performant and does not interfere with reading or clicking content (petals should not block pointer events). Provide a user control to reduce motion (respect prefers-reduced-motion).",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-hover-reveals-hidden-messages-interactions-certain-romantic-lines-words-should-be-visually-hinted-and-reveal-a-hidden-message-on-hover-focus-and-tap-on-mobile-with-a-gentle-transition",
+      "title": "Implement “hover reveals hidden messages” interactions: certain romantic lines/words should be visually hinted and reveal a hidden message on hover/focus (and tap on mobile) with a gentle transition.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-virtual-rose-gift-bouquet-interaction-display-a-bouquet-of-roses-where-individual-roses-are-clickable-tappable-clicking-a-rose-reveals-a-short-love-note-modal-popover-or-expanding-card-with-smooth-animation",
+      "title": "Create a Virtual Rose Gift / bouquet interaction: display a bouquet of roses where individual roses are clickable/tappable; clicking a rose reveals a short love note (modal, popover, or expanding card) with smooth animation.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-soft-background-music-toggle-play-pause-that-is-user-initiated-no-autoplay-and-clearly-indicates-state-the-toggle-must-work-on-mobile-and-desktop-and-should-not-block-the-rest-of-the-experience-if-audio-cannot-play",
+      "title": "Add a soft background music toggle (play/pause) that is user-initiated (no autoplay) and clearly indicates state. The toggle must work on mobile and desktop and should not block the rest of the experience if audio cannot play.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-provide-personalized-romantic-copy-in-english-for-each-section-and-for-micro-interactions-e-g-tooltip-hidden-lines-rose-note-content-the-copy-must-feel-intimate-warm-elegant-and-aimed-at-one-person-the-boyfriend",
+      "title": "Provide personalized romantic copy in English for each section and for micro-interactions (e.g., tooltip/hidden lines, rose-note content). The copy must feel intimate, warm, elegant, and aimed at one person (the boyfriend).",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-deliver-the-complete-implementation-in-the-existing-react-typescript-app-using-tailwind-for-styling-and-lightweight-dom-css-canvas-svg-animations-no-additional-heavy-frameworks-ensure-the-experience-is-fully-responsive-and-touch-friendly",
+      "title": "Deliver the complete implementation in the existing React+TypeScript app using Tailwind for styling and lightweight DOM/CSS/Canvas/SVG animations (no additional heavy frameworks). Ensure the experience is fully responsive and touch-friendly.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-the-bouquet-illustration-in-the-virtual-rose-gift-section-so-it-reliably-loads-and-displays-in-production-deployments-including-when-the-app-is-hosted-under-a-non-root-base-path-update-the-image-src-construction-to-use-the-app-base-url-instead-of-a-hard-coded-leading-path-and-add-a-graceful-fallback-if-the-image-fails-to-load",
+      "title": "Fix the bouquet illustration in the Virtual Rose Gift section so it reliably loads and displays in production deployments (including when the app is hosted under a non-root base path). Update the image `src` construction to use the app base URL (instead of a hard-coded leading `/` path), and add a graceful fallback if the image fails to load.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create overall single-page romantic website structure with 5 sections (Landing, Why you’re my favorite, Virtual rose gift, Love note/message, Ending screen)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Implement warm romantic visual design system: rose red/soft pink/cream/warm beige palette, gentle gradients, soft shadows, romantic serif headings + clean sans-serif body",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add smooth scroll and section reveal animations for an intimate, elegant-but-cute experience",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Add floating rose petals animation overlay (lightweight, performant)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Add interactive hover effects (heartbeat/glow) and hover-reveal hidden messages",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Add clickable roses/bouquet interaction that reveals love notes",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Add soft background music toggle (play/pause, user-initiated)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Provide sample personalized romantic copy for all sections and micro-interactions",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Deliver complete implementation code in plain HTML/CSS/JS (no heavy frameworks), responsive for mobile and desktop",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Cozy romantic Rose Day interactive gift website (single-page)",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
